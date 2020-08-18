@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends 'basic_app/base.html' %}
+
+<!-- Load custome filter/templatetags -->
+{% load my_filter%}
+
+{% block body_block %}
+        <h1>This is index page.</h1>
+        <h2>{{ text|cut:'he'|title}}</h2>
+        <h3>{{ number|add:'1' }}</h3>
+    {% endblock %}
